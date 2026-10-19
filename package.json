@@ -1,0 +1,64 @@
+{
+  "name": "@amitkaps/craftz-test",
+  "version": "0.0.0",
+  "description": "A package with a static site, started by craftz new to test the release cycle.",
+  "homepage": "https://craftz-test.amitkaps.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitkaps/craftz-test.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vp pack --watch",
+    "build": "vp pack",
+    "check": "vp check",
+    "test": "vp test --run",
+    "verify": "pnpm check && pnpm prose check && pnpm test && pnpm build && vp build",
+    "ship": "cf deploy --prebuilt",
+    "fix": "vp check --fix",
+    "prose": "prose",
+    "pr": "craftz pr",
+    "gone": "craftz gone",
+    "craftz": "craftz",
+    "prepack": "pnpm run build"
+  },
+  "devDependencies": {
+    "@amitkaps/craftz": "^0.1.0",
+    "@amitkaps/prose": "^0.8.0",
+    "@cloudflare/vite-plugin": "2.0.0-beta.v.1",
+    "@types/node": "^26.6.5",
+    "cf": "1.0.0-beta.18",
+    "publint": "^0.3.25",
+    "vite-plus": "1.3.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.13.0",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": ">=26",
+      "onFail": "error"
+    }
+  },
+  "engines": {
+    "node": ">=26"
+  },
+  "packageManager": "pnpm@12.13.0"
+}
