@@ -6,14 +6,12 @@
  * deploy commands are set on the Worker, as craftz's rules list. The site answers only on its
  * domain, so `workers.dev` and preview URLs are off.
  */
-import { defineConfig } from "cf/config";
+import { site } from "@amitkaps/craftz/cloudflare";
 
-export default defineConfig({
-  worker: {
-    name: "craftz-test",
-    compatibilityDate: "2026-10-12",
-    domains: ["craftz-test.amitkaps.com"],
-    workersDev: false,
-    previewUrls: false,
+export default site({
+  name: "craftz-test",
+  domains: ["craftz-test.amitkaps.com"],
+  assets: {
+    directory: "dist",
   },
 });
