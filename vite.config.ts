@@ -9,10 +9,9 @@
  */
 import { defineConfig } from "vite-plus";
 import { craftz } from "@amitkaps/craftz";
-import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
-  plugins: [craftz(), cloudflare({ assetsOnly: true })],
+  plugins: [craftz()],
 
   // The site is the folder `prose build` writes.
   publicDir: ".prose",
