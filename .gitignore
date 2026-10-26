@@ -22,3 +22,6 @@ Thumbs.db
 # Cloudflare Vite plugin
 .dev.vars*
 .wrangler
+
+# Written by prose outline
+outline.md
