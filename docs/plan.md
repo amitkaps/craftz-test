@@ -4,7 +4,7 @@ What's next, in order, and what works now.
 
 ## Next, in order
 
-1. The first thing craftz-test does.
+- [ ] The first thing craftz-test does.
 
 ## Where it is
 
