@@ -37,7 +37,7 @@
     "prepack": "pnpm run build"
   },
   "devDependencies": {
-    "@amitkaps/craftz": "0.9.0",
+    "@amitkaps/craftz": "0.10.0",
     "@amitkaps/prose": "0.11.0",
     "@types/node": "26.6.5",
     "publint": "0.3.25",
