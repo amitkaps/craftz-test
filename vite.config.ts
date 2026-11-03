@@ -41,7 +41,7 @@ export default defineConfig({
 
   fmt: { proseWrap: "never" },
 
-  build: { target: ["chrome142", "edge142", "firefox153", "safari18.6", "ios18.6"] },
+  build: { target: ["chrome143", "edge143", "firefox153", "safari18.6", "ios18.6"] },
 
   /** @prose
    * # Verify
