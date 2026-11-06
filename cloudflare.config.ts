@@ -14,7 +14,7 @@ export default {
     assets: {
       directory: "dist",
     },
-    compatibilityDate: "2026-10-19",
+    compatibilityDate: "2026-11-04",
     workersDev: false,
     previewUrls: false,
   },
