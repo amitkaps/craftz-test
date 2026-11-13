@@ -41,7 +41,7 @@ export default defineConfig({
 
   fmt: { proseWrap: "never" },
 
-  build: { target: ["chrome143", "edge143", "firefox153", "safari18.6", "ios18.6"] },
+  build: { target: ["chrome148", "edge148", "firefox153", "safari18.6", "ios18.6"] },
 
   /** @prose
    * # Verify
@@ -52,10 +52,12 @@ export default defineConfig({
    * `build`. The site is what's left in `dist/`.
    */
   run: {
-    cache: false,
+    cache: { scripts: false, tasks: true },
     tasks: {
-      web: { command: "vp build", dependsOn: ["build"] },
-      all: { command: "true", dependsOn: ["check", "test", "build", "web"] },
+      web: { command: "vp build", dependsOn: ["built"] },
+      all: { command: "true", dependsOn: ["check", "tested", "built", "web"], cache: false },
+      tested: { command: "pnpm run test", cache: { input: [{ auto: true }, "!dist/**"] } },
+      built: { command: "pnpm run build" },
     },
   },
 });
