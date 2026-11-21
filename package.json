@@ -38,8 +38,8 @@
     "outline": "prose outline"
   },
   "devDependencies": {
-    "@amitkaps/craftz": "0.28.0",
-    "@amitkaps/prose": "0.14.0",
+    "@amitkaps/craftz": "0.29.0",
+    "@amitkaps/prose": "0.14.1",
     "@types/node": "26.6.6",
     "publint": "0.3.25",
     "vite-plus": "1.7.0"
