@@ -25,3 +25,6 @@ Thumbs.db
 
 # Written by prose outline
 outline.md
+
+# Agents' worktrees
+.claude/worktrees
